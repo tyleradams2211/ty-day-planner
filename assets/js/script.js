@@ -2,184 +2,206 @@ var currentP = document.getElementById('currentDay');
 
 var plannerDay = [
     {
-        id: "0",
-        hour: "01",
-        time: "01",
+        planNum: "0",
+        planHour: "01",
+        planTime: "01",
         ampm: "AM",
-        reminder: ""
+        planText: ""
     },
     {
-        id: "1",
-        hour: "02",
-        time: "02",
-        meridiem: "AM",
-        reminder: ""
+        planNum: "1",
+        planHour: "02",
+        planTime: "02",
+        ampm: "AM",
+        planText: ""
     },
     {
-        id: "2",
-        hour: "03",
-        time: "03",
-        meridiem: "AM",
-        reminder: ""
+        planNum: "2",
+        planHour: "03",
+        planTime: "03",
+        ampm: "AM",
+        planText: ""
     },
     {
-        id: "3",
-        hour: "04",
-        time: "04",
-        meridiem: "AM",
-        reminder: ""
+        planNum: "3",
+        planHour: "04",
+        planTime: "04",
+        ampm: "AM",
+        planText: ""
     },
     {
-        id: "4",
-        hour: "05",
-        time: "05",
-        meridiem: "AM",
-        reminder: ""
+        planNum: "4",
+        planHour: "05",
+        planTime: "05",
+        ampm: "AM",
+        planText: ""
     },
     {
-        id: "5",
-        hour: "06",
-        time: "06",
-        meridiem: "AM",
-        reminder: ""
+        planNum: "5",
+        planHour: "06",
+        planTime: "06",
+        ampm: "AM",
+        planText: ""
     },
     {
-        id: "6",
-        hour: "07",
-        time: "07",
-        meridiem: "AM",
-        reminder: ""
+        planNum: "6",
+        planHour: "07",
+        planTime: "07",
+        ampm: "AM",
+        planText: ""
     },
     {
-        id: "7",
-        hour: "08",
-        time: "08",
-        meridiem: "AM",
-        reminder: ""
+        planNum: "7",
+        planHour: "08",
+        planTime: "08",
+        ampm: "AM",
+        planText: ""
     },
     {
-        id: "8",
-        hour: "09",
-        time: "09",
-        meridiem: "AM",
-        reminder: ""
+        planNum: "8",
+        planHour: "09",
+        planTime: "09",
+        ampm: "AM",
+        planText: ""
     },
     {
-        id: "9",
-        hour: "10",
-        time: "10",
-        meridiem: "AM",
-        reminder: ""
+        planNum: "9",
+        planHour: "10",
+        planTime: "10",
+        ampm: "AM",
+        planText: ""
     },
     {
-        id: "10",
-        hour: "11",
-        time: "11",
-        meridiem: "AM",
-        reminder: ""
+        planNum: "10",
+        planHour: "11",
+        planTime: "11",
+        ampm: "AM",
+        planText: ""
     },
     {
-        id: "11",
-        hour: "12",
-        time: "12",
-        meridiem: "PM",
-        reminder: ""
+        planNum: "11",
+        planHour: "12",
+        planTime: "12",
+        ampm: "PM",
+        planText: ""
     },
     {
-        id: "12",
-        hour: "01",
-        time: "13",
-        meridiem: "PM",
-        reminder: ""
+        planNum: "12",
+        planHour: "01",
+        planTime: "13",
+        ampm: "PM",
+        planText: ""
     },
     {
-        id: "13",
-        hour: "02",
-        time: "14",
-        meridiem: "PM",
-        reminder: ""
+        planNum: "13",
+        planHour: "02",
+        planTime: "14",
+        ampm: "PM",
+        planText: ""
     },
     {
-        id: "14",
-        hour: "03",
-        time: "15",
-        meridiem: "PM",
-        reminder: ""
+        planNum: "14",
+        planHour: "03",
+        planTime: "15",
+        ampm: "PM",
+        planText: ""
     },
     {
-        id: "15",
-        hour: "04",
-        time: "16",
-        meridiem: "PM",
-        reminder: ""
+        planNum: "15",
+        planHour: "04",
+        planTime: "16",
+        ampm: "PM",
+        planText: ""
     },
     {
-        id: "16",
-        hour: "05",
-        time: "17",
-        meridiem: "PM",
-        reminder: ""
+        planNum: "16",
+        planHour: "05",
+        planTime: "17",
+        ampm: "PM",
+        planText: ""
     },
     {
-        id: "17",
-        hour: "06",
-        time: "18",
-        meridiem: "PM",
-        reminder: ""
+        planNum: "17",
+        planHour: "06",
+        planTime: "18",
+        ampm: "PM",
+        planText: ""
     },
     {
-        id: "18",
-        hour: "07",
-        time: "19",
-        meridiem: "PM",
-        reminder: ""
+        planNum: "18",
+        planHour: "07",
+        planTime: "19",
+        ampm: "PM",
+        planText: ""
     },
     {
-        id: "19",
-        hour: "08",
-        time: "20",
-        meridiem: "PM",
-        reminder: ""
+        planNum: "19",
+        planHour: "08",
+        planTime: "20",
+        ampm: "PM",
+        planText: ""
     },
     {
-        id: "20",
-        hour: "09",
-        time: "21",
-        meridiem: "PM",
-        reminder: ""
+        planNum: "20",
+        planHour: "09",
+        planTime: "21",
+        ampm: "PM",
+        planText: ""
     },
     {
-        id: "21",
-        hour: "10",
-        time: "22",
-        meridiem: "PM",
-        reminder: ""
+        planNum: "21",
+        planHour: "10",
+        planTime: "22",
+        ampm: "PM",
+        planText: ""
     },
     {
-        id: "22",
-        hour: "11",
-        time: "23",
-        meridiem: "PM",
-        reminder: ""
+        planNum: "22",
+        planHour: "11",
+        planTime: "23",
+        ampm: "PM",
+        planText: ""
     },
     {
-        id: "23",
-        hour: "12",
-        time: "24",
-        meridiem: "PM",
-        reminder: ""
+        planNum: "23",
+        planHour: "12",
+        planTime: "24",
+        ampm: "AM",
+        planText: ""
     },
-    {
-        id: "24",
-        hour: "04",
-        time: "16",
-        meridiem: "AM",
-        reminder: ""
-    },
-    
 ]
-// sets date for header
-const getCurrentDay = () => {
+// Deploys dynamic structure of plannerDay
+plannerDay.forEach(function(planElm) {
+    var planHourEach = $("<form>").attr({"class": "row"});
+    $(".container").append(planHourEach);
+    var hourField = $("<div>").text(`${planElm.planHour}${planElm.ampm}`).attr({"class": "col-md-2 hour"});
+    var planHourCont = $("<div>").attr({"class": "col-md-9 description p-0"});
+    var planData = $("<textarea>");
+    planHourCont.append(planData);
+    planData.attr("planNum", planElm.planNum);
+    if (planElm.planTime < moment().format("HH")) {
+        planData.attr ({"class": "past",});
+    } else if (planElm.planTime === moment().format("HH")) {
+        planData.attr({"class": "present"});
+    } else if (planElm.planTime > moment().format("HH")) {
+        planData.attr({"class": "future"});
+    }
+    var saveBtn = $("<i class='far fa-save fa-lg'></i>");
+    var planSaveBtn = $("<button>").attr({"class": "col-md-1 saveBtn"});
+    planSaveBtn.append(saveBtn);
+    planHourEach.append(hourField, planHourCont, planSaveBtn);
+})
+// Local storage SET
+function savePlanText() {
+    localStorage.setItem("plannerDay", JSON.stringify(plannerDay));
+}
+function insertPlanText() {
+    plannerDay.forEach(function (plannerHour) {
+        $(`#${plannerHour.id}`).val(plannerHour.reminder);
+    })
+}
+// header date
+function getCurrentDay() {
     var currentDay = moment().format('dddd, MMMM Do');
     currentP.textContent = currentDay;
 }
