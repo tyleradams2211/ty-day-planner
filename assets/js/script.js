@@ -1,5 +1,4 @@
 var currentP = document.getElementById('currentDay');
-
 var plannerDay = [
     {
         planNum: "0",
@@ -195,9 +194,10 @@ plannerDay.forEach(function(planElm) {
 function savePlanText() {
     localStorage.setItem("plannerDay", JSON.stringify(plannerDay));
 }
+// 
 function insertPlanText() {
-    plannerDay.forEach(function (plannerHour) {
-        $(`#${plannerHour.id}`).val(plannerHour.reminder);
+    plannerDay.forEach(function (plannerHourText) {
+        $(`#${plannerHourText.planNum}`).val(plannerHourText.planText);
     })
 }
 // header date
