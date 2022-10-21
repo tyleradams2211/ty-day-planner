@@ -169,7 +169,31 @@ var plannerDay = [
         planText: ""
     },
 ]
-// Deploys dynamic structure of plannerDay
+// header date
+function getCurrentDay() {
+    var currentDay = moment().format('dddd, MMMM Do');
+    currentP.textContent = currentDay;
+}
+getCurrentDay();
+// Local storage SET
+function savePlanText() {
+    localStorage.setItem("plannerDay", JSON.stringify(plannerDay)) || [];
+}
+// inserts data fof planNum and planText
+function insertPlanText() {
+    plannerDay.forEach(function (plannerHourText) {
+        $(`#${plannerHourText.planNum}`).val(plannerHourText.planText);
+    })
+}
+function setPlannerDay() {
+    var localDay = JSON.parse(localStorage.getItem("plannerDay"));
+    if (localDay) {
+        plannerDay = localDay;
+    }
+    savePlanText();
+    insertPlanText();
+}
+// Creates dynamic structure of plannerDay
 plannerDay.forEach(function(planElm) {
     var planHourEach = $("<form>").attr({"class": "row"});
     $(".container").append(planHourEach);
@@ -185,24 +209,21 @@ plannerDay.forEach(function(planElm) {
     } else if (planElm.planTime > moment().format("HH")) {
         planData.attr({"class": "future"});
     }
+    // Save Button elment
     var saveBtn = $("<i class='far fa-save fa-lg'></i>");
     var planSaveBtn = $("<button>").attr({"class": "col-md-1 saveBtn"});
     planSaveBtn.append(saveBtn);
     planHourEach.append(hourField, planHourCont, planSaveBtn);
 })
-// Local storage SET
-function savePlanText() {
-    localStorage.setItem("plannerDay", JSON.stringify(plannerDay));
-}
-// 
-function insertPlanText() {
-    plannerDay.forEach(function (plannerHourText) {
-        $(`#${plannerHourText.planNum}`).val(plannerHourText.planText);
-    })
-}
-// header date
-function getCurrentDay() {
-    var currentDay = moment().format('dddd, MMMM Do');
-    currentP.textContent = currentDay;
-}
-getCurrentDay();
+
+setPlannerDay();
+
+// Save Button event
+$(".saveBtn").on("click", function(event) {
+    event.preventDefault();
+    var savePlannerDay = $(this).siblings(".description").children(".future").attr("planNum");
+    plannerDay[savePlannerDay].planText = $(this).siblings(".description").children(".future").val();
+    console.log(savePlannerDay);
+    savePlanText();
+    insertPlanText();
+})
